@@ -25,10 +25,32 @@ function forecast(cityName) {
         <h6>Weather: ${response.weather[0].description}</h6>
         <h6>Humidity: ${response.main.humidity}</h6>
         </div>`)
-        // created variable for latitude and longitude
+        // 7 created variable for latitude and longitude
         var lat = response.coord.lat
         var lon = response.coord.lon
+        var url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}&units=imperial` // 8 created ${} endpoints for lat, lon and APIkey
+        
+        $.ajax({ // 9 method to place an API call through jQuery
+            method:"GET",
+            url:url
+        }).then(function(result) { // only responds to the code after when using .then
+            console.log(result)
+            var currentUvi = result.current.uvi
+            $("#uvi").html(`<h4 id="index">UV:${currentUvi}</h4>`)
+            if (currentUvi >= 11) {
+                $("#index").addClass("purple")
+            } else if(currentUvi >= 8) {
+                $("#index").addClass("red")
+            } else if(currentUvi >= 6) {
+                $("#index").addClass("orange")
+            } else if(currentUvi >= 3) {
+                $("#index").addClass("yellow")
+            } else if(currentUvi >= 0) {
+                $("#index").addClass("green")
+            } 
+        })
     })
+
 };
 
 
