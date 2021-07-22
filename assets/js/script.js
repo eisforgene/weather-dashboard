@@ -15,8 +15,20 @@ function forecast(cityName) {
     $.ajax({ // 4 method to place an API call through jQuery
         method:"GET",
         url:queryURL
-    }).then(function(response) { // only responds to the code after when using .then
+    }).then(function(response) { // 5 only responds to the code after when using .then
         console.log(response)
+        // 6 created #today and put it into html where we want content displayed
+        $("#today").html(`<div>
+        <h1>City: ${response.name}<span><img src="https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png"</span></h1>
+        <h6>Temp: ${response.main.temp}</h6>
+        <h6>Wind Speed: ${response.wind.speed}</h6>
+        <h6>Weather: ${response.weather[0].description}</h6>
+        <h6>Humidity: ${response.main.humidity}</h6>
+        </div>`)
+        // created variable for latitude and longitude
+        var lat = response.coord.lat
+        var lon = response.coord.lon
     })
 };
+
 
