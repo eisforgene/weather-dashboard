@@ -53,11 +53,11 @@ Using OpenWeather One Call API we were to retrieve weather data for cities. Read
 [Markdown Guide](https://guides.github.com/features/mastering-markdown/)
 [Semantic Tags](https://www.w3schools.com/html/html5_semantic_elements.asp#:~:text=A%20semantic%20element%20clearly%20describes,%3E%20%2D%20Clearly%20defines%20its%20content.)
 [JavaScript](https://developer.mozilla.org/en-US/) 
-[Moment](https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js)
+[jQuery](https://code.jquery.com/jquery-3.6.0.js)
 [One Call API](https://openweathermap.org/api/one-call-api)
 
 #### Screenshots:
 
-![Screenshot 1]()
-![Screenshot 2]()
-![Screenshot 3]()
+![Screenshot 1](https://github.com/eisforgene/weather-dashboard/blob/main/assets/images/screenshot-1.JPG)
+![Screenshot 2](https://github.com/eisforgene/weather-dashboard/blob/main/assets/images/screenshot-2.JPG)
+![Screenshot 3](https://github.com/eisforgene/weather-dashboard/blob/main/assets/images/screenshot-3.JPG)
